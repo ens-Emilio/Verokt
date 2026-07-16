@@ -36,12 +36,31 @@ Insira uma empresa-alvo e seus concorrentes. O sistema orquestra agentes de scra
 
 ## Quick Start (Local)
 
-A forma mais rapida de rodar o projeto localmente:
+A forma mais rapida de rodar o projeto localmente e com o script automatico:
+
+```bash
+# 1. Baixe e execute o script de setup
+curl -fsSL https://raw.githubusercontent.com/ens-Emilio/Verokt/main/scripts/setup-local.sh | bash
+
+# 2. Entre na pasta
+cd Verokt
+
+# 3. Edite .env com suas API keys
+# Veja a secao "Obtendo API Keys" abaixo
+
+# 4. Verifique se as envs estao OK
+./scripts/check-env.sh
+
+# 5. Rode o projeto
+pnpm dev
+```
+
+Ou, se preferir fazer manualmente:
 
 ```bash
 # 1. Clone
-https://github.com/seu-usuario/verokt.git
-cd verokt
+git clone https://github.com/ens-Emilio/Verokt.git
+cd Verokt
 
 # 2. Instale dependencias
 pnpm install
