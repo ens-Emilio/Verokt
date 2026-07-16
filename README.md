@@ -117,6 +117,11 @@ make help
 
 Opcoes:
 
+**Yolo-Auto (recomendado - plano flat-rate)**
+- https://yolo-auto.com/signup
+- `COMPATIBLE_BASE_URL=https://yolo-auto.com/v1`
+- `COMPATIBLE_MODEL=qwen3.6-35b-a3b`
+
 **DeepSeek**
 - https://platform.deepseek.com/api_keys
 - `COMPATIBLE_BASE_URL=https://api.deepseek.com/v1`

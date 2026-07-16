@@ -20,7 +20,7 @@ MISSING=0
 
 for VAR in "${REQUIRED_VARS[@]}"; do
   VALUE=$(grep "^${VAR}=" .env | cut -d'=' -f2- | tr -d '"' | xargs)
-  if [ -z "$VALUE" ] || [ "$VALUE" = "..." ] || [ "$VALUE" = "sk-..." ] || [ "$VALUE" = "sk-ant-..." ]; then
+  if [ -z "$VALUE" ] || [ "$VALUE" = "..." ] || [ "$VALUE" = "sk-..." ] || [ "$VALUE" = "sk-ant-..." ] || [ "$VALUE" = "yolo_..." ]; then
     echo "❌ $VAR nao configurado"
     MISSING=$((MISSING + 1))
   else
