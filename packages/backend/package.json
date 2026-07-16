@@ -1,0 +1,45 @@
+{
+  "name": "@verokt/backend",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"tsx watch src/index.ts\" \"tsx watch src/workers/index.ts\"",
+    "dev:api": "tsx watch src/index.ts",
+    "dev:workers": "tsx watch src/workers/index.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "db:generate": "drizzle-kit generate",
+    "db:push": "drizzle-kit push",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.14.0",
+    "@hono/zod-validator": "^0.8.0",
+    "@tanstack/ai": "^0.40.0",
+    "@tanstack/ai-anthropic": "^0.16.0",
+    "@tanstack/ai-openai": "^0.16.0",
+    "@verokt/shared": "workspace:*",
+    "bullmq": "^5.34.0",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.0",
+    "drizzle-orm": "^0.40.0",
+    "hono": "^4.7.0",
+    "ioredis": "^5.4.0",
+    "openai": "^6.41.0",
+    "playwright": "^1.49.0",
+    "postgres": "^3.4.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "concurrently": "^9.1.0",
+    "drizzle-kit": "^0.30.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0"
+  }
+}
